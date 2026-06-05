@@ -1,471 +1,376 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Morning Tape · Daily — June 4, 2026</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>The Morning Tape · Daily — June 5, 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --ink:#0a0d14; --paper:#131722; --paper-2:#1a1f2e;
-  --line:#2a2f3e; --line-soft:#1f2333;
-  --text-1:#ece6d6; --text-2:#9c9a8d; --text-3:#5a5c5e; --text-4:#3d4050;
-  --red:#e8624c; --amber:#d4a574; --teal:#6db8a8;
-  --gold:#c9a96a; --plum:#b67aa1; --slate:#7d92b3;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{background:var(--ink);color:var(--text-1);font-family:'IBM Plex Sans',sans-serif;font-weight:300;line-height:1.55;font-size:15px}
-body{max-width:1280px;margin:0 auto;padding:48px 56px 96px;background:var(--ink)}
-a{color:inherit;text-decoration:none}
-a:hover{color:var(--gold)}
+  :root{
+    --ink:#0a0d14; --paper:#131722; --paper-2:#1a1f2e; --line:#2a2f3e; --line-soft:#1f2333;
+    --text-1:#ece6d6; --text-2:#9c9a8d; --text-3:#5a5c5e; --text-4:#3d4050;
+    --red:#e8624c; --amber:#d4a574; --teal:#6db8a8; --gold:#c9a96a; --plum:#b67aa1; --slate:#7d92b3;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--ink);color:var(--text-1);font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:15px;line-height:1.55}
+  a{color:var(--gold);text-decoration:none;border-bottom:1px dotted var(--text-4)}
+  a:hover{color:var(--amber);border-bottom-color:var(--amber)}
+  .mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
+  .serif{font-family:"Fraunces",Georgia,serif;font-variation-settings:"opsz" 96,"SOFT" 30}
+  .wrap{max-width:1240px;margin:0 auto;padding:34px 32px 64px}
 
-.masthead{border-bottom:1px solid var(--line);padding-bottom:28px;margin-bottom:32px}
-.masthead-top{display:flex;justify-content:space-between;align-items:baseline;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-2);margin-bottom:24px}
-.masthead-top .brand{color:var(--text-1)}
-.masthead-top .date{color:var(--text-2)}
-.masthead h1{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:88px;letter-spacing:-0.03em;line-height:0.95;color:var(--text-1);font-variation-settings:'opsz' 144,'SOFT' 50}
-.subtitle{margin-top:18px;font-size:18px;color:var(--text-2);max-width:880px;font-style:italic;font-family:'Fraunces',serif;font-weight:300;letter-spacing:0.005em}
+  /* MASTHEAD */
+  .masthead-top{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:24px}
+  .masthead-top .brand{font-family:"IBM Plex Mono";font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-2)}
+  .masthead-top .brand b{color:var(--gold);font-weight:500}
+  .masthead-top .date{font-family:"IBM Plex Mono";font-size:12px;letter-spacing:.1em;color:var(--text-2)}
+  h1.title{font-family:"Fraunces";font-style:italic;font-variation-settings:"opsz" 144,"SOFT" 50;font-weight:300;font-size:clamp(64px,9vw,128px);line-height:.95;margin:8px 0 18px;letter-spacing:-0.02em;color:var(--text-1)}
+  .subtitle{max-width:880px;font-family:"Fraunces";font-style:italic;font-variation-settings:"opsz" 36,"SOFT" 30;font-weight:300;font-size:21px;color:var(--text-2);line-height:1.5;margin-bottom:32px;padding-bottom:28px;border-bottom:1px solid var(--line-soft)}
 
-.gauge-wrap{margin-top:36px;padding:24px 28px;border:1px solid var(--line);background:var(--paper);border-radius:2px}
-.gauge-head{display:flex;justify-content:space-between;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--text-3);margin-bottom:14px}
-.gauge-anchor-left{color:var(--red)}
-.gauge-anchor-right{color:var(--teal)}
-.gauge-row{display:flex;align-items:center;gap:24px}
-.gauge-bar-wrap{flex:1;position:relative}
-.gauge-bar{height:14px;border-radius:2px;background:linear-gradient(90deg,#7a2418 0%,#e8624c 25%,#d4a574 50%,#c9a96a 75%,#6db8a8 100%);position:relative;border:1px solid var(--line)}
-.gauge-needle{position:absolute;top:-6px;width:2px;height:26px;background:var(--text-1);box-shadow:0 0 0 2px var(--ink)}
-.gauge-score{font-family:'IBM Plex Mono',monospace;font-size:44px;font-weight:500;color:var(--text-1);letter-spacing:-0.02em;min-width:80px;text-align:right}
-.gauge-driver{margin-top:14px;font-family:'Fraunces',serif;font-style:italic;font-size:14px;color:var(--text-2);font-weight:300}
+  /* GAUGE */
+  .gauge{margin:0 0 36px;padding:22px 24px;background:var(--paper);border:1px solid var(--line);border-radius:4px}
+  .gauge-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:14px}
+  .gauge-label{font-family:"IBM Plex Mono";font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-2)}
+  .gauge-score{font-family:"IBM Plex Mono";font-size:54px;font-weight:500;color:var(--text-1);line-height:.9}
+  .gauge-bar{position:relative;height:14px;border-radius:8px;background:linear-gradient(90deg,#7a1d12 0%,#b03520 18%,#d4a574 36%,#e8c577 55%,#c9a96a 72%,#6db8a8 100%);box-shadow:inset 0 0 0 1px var(--line)}
+  .gauge-needle{position:absolute;top:-6px;width:3px;height:26px;background:var(--text-1);border-radius:2px;box-shadow:0 0 0 2px var(--ink),0 0 12px rgba(236,230,214,.6)}
+  .gauge-anchors{display:flex;justify-content:space-between;margin-top:8px;font-family:"IBM Plex Mono";font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-3)}
+  .gauge-note{font-family:"Fraunces";font-style:italic;font-variation-settings:"opsz" 24,"SOFT" 40;font-size:15px;color:var(--text-2);margin-top:14px;padding-top:12px;border-top:1px dashed var(--line-soft)}
 
-.ticker-section{margin-top:36px}
-.section-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:var(--text-3);margin-bottom:14px;border-top:1px solid var(--line-soft);padding-top:18px;display:flex;justify-content:space-between}
-.section-label .right{color:var(--text-4)}
-.ticker-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--line-soft);border:1px solid var(--line-soft)}
-.ticker-card{background:var(--paper);padding:14px 14px 13px;display:flex;flex-direction:column;gap:6px;min-height:100px}
-.ticker-name{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-2);display:flex;justify-content:space-between;align-items:center}
-.ticker-name .tag{font-size:8px;color:var(--text-3);letter-spacing:0.18em}
-.ticker-value{font-family:'IBM Plex Mono',monospace;font-size:20px;font-weight:500;color:var(--text-1);letter-spacing:-0.01em}
-.ticker-chg{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:400}
-.chg-up{color:var(--teal)}
-.chg-dn{color:var(--red)}
-.ticker-note{font-family:'Fraunces',serif;font-style:italic;font-size:11px;color:var(--text-3);font-weight:300;line-height:1.35}
+  /* TICKER STRIP */
+  .ticker-section{margin-bottom:42px}
+  .section-bar{display:flex;align-items:center;gap:14px;margin:0 0 16px}
+  .section-bar .sym{font-family:"IBM Plex Mono";color:var(--gold);font-size:13px;letter-spacing:.15em}
+  .section-bar .title-s{font-family:"IBM Plex Mono";font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--text-2)}
+  .section-bar .rule{flex:1;height:1px;background:var(--line-soft)}
+  .ticker-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+  .tk{background:var(--paper);border:1px solid var(--line);padding:14px 14px 12px;border-radius:3px;position:relative}
+  .tk.futures{border-left:2px solid var(--amber)}
+  .tk .name{font-family:"IBM Plex Mono";font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--text-2);margin-bottom:6px;display:flex;justify-content:space-between;align-items:center}
+  .tk .name .ftag{font-family:"IBM Plex Mono";font-size:8px;background:rgba(212,165,116,.15);color:var(--amber);padding:1px 5px;border-radius:2px;letter-spacing:.15em}
+  .tk .val{font-family:"IBM Plex Mono";font-size:22px;font-weight:500;color:var(--text-1);line-height:1}
+  .tk .chg{font-family:"IBM Plex Mono";font-size:12px;margin-top:5px;font-weight:500}
+  .tk .chg.up{color:var(--teal)}
+  .tk .chg.dn{color:var(--red)}
+  .tk .note{font-family:"Fraunces";font-style:italic;font-variation-settings:"opsz" 14,"SOFT" 40;font-size:12px;color:var(--text-3);margin-top:8px;line-height:1.35}
 
-.filter-bar{margin-top:44px;display:flex;gap:8px;flex-wrap:wrap;padding-bottom:18px;border-bottom:1px solid var(--line-soft)}
-.chip{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;padding:7px 13px;border:1px solid var(--line);background:transparent;color:var(--text-2);cursor:pointer;border-radius:2px;transition:all 0.18s}
-.chip:hover{border-color:var(--text-3);color:var(--text-1)}
-.chip.active{background:var(--text-1);color:var(--ink);border-color:var(--text-1)}
+  /* FILTER BAR */
+  .filter-bar{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px;padding:14px 0;border-bottom:1px solid var(--line-soft)}
+  .chip{font-family:"IBM Plex Mono";font-size:11px;letter-spacing:.15em;text-transform:uppercase;padding:7px 14px;border:1px solid var(--line);background:transparent;color:var(--text-2);cursor:pointer;border-radius:20px;transition:all .15s}
+  .chip:hover{border-color:var(--text-2);color:var(--text-1)}
+  .chip.active{background:var(--text-1);color:var(--ink);border-color:var(--text-1)}
 
-.stories-section{margin-top:36px}
-.section-title{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:32px;color:var(--text-1);margin-bottom:6px;font-variation-settings:'opsz' 144,'SOFT' 30}
-.section-sub{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--text-3);margin-bottom:28px}
-.story{display:grid;grid-template-columns:90px 1fr;gap:32px;padding:30px 0;border-top:1px solid var(--line-soft)}
-.story:last-of-type{border-bottom:1px solid var(--line-soft)}
-.story-rank{font-family:'Fraunces',serif;font-style:italic;font-weight:300;font-size:64px;color:var(--text-3);line-height:1;letter-spacing:-0.03em;font-variation-settings:'opsz' 144,'SOFT' 40}
-.story-rank.top{color:var(--gold)}
-.story-body{padding-top:8px}
-.story-tags{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
-.tag{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;padding:4px 9px;border-radius:2px}
-.tag-critical{background:var(--red);color:var(--ink)}
-.tag-watch{background:var(--gold);color:var(--ink)}
-.tag-area{background:transparent;border:1px solid var(--line)}
-.tag-area.equity{border-color:var(--slate);color:var(--slate)}
-.tag-area.credit{border-color:var(--amber);color:var(--amber)}
-.tag-area.crypto{border-color:var(--plum);color:var(--plum)}
-.tag-area.commod{border-color:var(--red);color:var(--red)}
-.tag-area.macro{border-color:var(--gold);color:var(--gold)}
-.tag-area.fx{border-color:var(--teal);color:var(--teal)}
-.story-headline{font-family:'Fraunces',serif;font-weight:400;font-size:22px;line-height:1.25;color:var(--text-1);margin-bottom:12px;letter-spacing:-0.005em;font-variation-settings:'opsz' 144,'SOFT' 20}
-.story-summary{font-size:14.5px;color:var(--text-2);margin-bottom:16px;line-height:1.6}
-.story-summary b{color:var(--text-1);font-weight:500}
-.impact{border-left:2px solid var(--gold);padding:10px 16px;background:var(--paper);margin-bottom:14px}
-.impact-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
-.impact-text{font-size:13.5px;color:var(--text-2);line-height:1.55}
-.impact-watch{display:block;margin-top:6px;font-family:'Fraunces',serif;font-style:italic;font-size:13px;color:var(--text-1)}
-.impact-watch code{font-family:'IBM Plex Mono',monospace;font-style:normal;color:var(--gold);font-size:11.5px;letter-spacing:0.05em}
-.story-source{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-3)}
-.story-source a{color:var(--text-2);border-bottom:1px solid var(--line)}
-.story-source a:hover{color:var(--gold);border-bottom-color:var(--gold)}
+  /* STORIES */
+  .stories{display:flex;flex-direction:column;gap:0}
+  .story{display:grid;grid-template-columns:90px 1fr;gap:28px;padding:30px 0;border-bottom:1px solid var(--line-soft)}
+  .story:last-child{border-bottom:none}
+  .rank{font-family:"Fraunces";font-style:italic;font-variation-settings:"opsz" 144,"SOFT" 50;font-weight:300;font-size:74px;line-height:.85;color:var(--text-3);letter-spacing:-0.02em}
+  .story.top .rank{color:var(--gold)}
+  .story .body{min-width:0}
+  .tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+  .tag{font-family:"IBM Plex Mono";font-size:9px;letter-spacing:.2em;text-transform:uppercase;padding:3px 8px;border-radius:2px;font-weight:500}
+  .tag.crit{background:var(--red);color:var(--ink)}
+  .tag.watch{background:var(--gold);color:var(--ink)}
+  .tag.area{background:transparent;border:1px solid var(--line);color:var(--text-2)}
+  .tag.area.equity{border-color:var(--slate);color:var(--slate)}
+  .tag.area.credit{border-color:var(--amber);color:var(--amber)}
+  .tag.area.crypto{border-color:var(--plum);color:var(--plum)}
+  .tag.area.commod{border-color:var(--red);color:var(--red)}
+  .tag.area.macro{border-color:var(--gold);color:var(--gold)}
+  .tag.area.fx{border-color:var(--teal);color:var(--teal)}
+  .headline{font-family:"Fraunces";font-variation-settings:"opsz" 48,"SOFT" 30;font-weight:400;font-size:26px;line-height:1.2;letter-spacing:-0.01em;color:var(--text-1);margin:0 0 10px}
+  .summary{color:var(--text-2);font-size:15px;line-height:1.6;margin-bottom:14px}
+  .summary b{color:var(--text-1);font-weight:600}
+  .impact{border-left:2px solid var(--gold);padding:10px 16px;margin:14px 0;background:rgba(201,169,106,.04)}
+  .impact .ttl{font-family:"IBM Plex Mono";font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+  .impact .txt{color:var(--text-2);font-size:14px;line-height:1.5}
+  .impact .watch-line{font-family:"Fraunces";font-style:italic;font-variation-settings:"opsz" 18,"SOFT" 40;color:var(--text-2);margin-top:6px;font-size:13px}
+  .impact .watch-line b{color:var(--gold);font-style:normal;font-family:"IBM Plex Mono";font-size:11px;letter-spacing:.1em;font-weight:500}
+  .source{font-family:"IBM Plex Mono";font-size:11px;letter-spacing:.1em;color:var(--text-3);margin-top:8px}
+  .source a{color:var(--text-2)}
 
-.earnings-section{margin-top:64px}
-.earnings-week{margin-bottom:36px}
-.week-label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--text-2);margin-bottom:16px;display:flex;align-items:baseline;gap:14px}
-.week-label .week-range{color:var(--text-3);font-size:10px}
-.earnings-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-soft);border:1px solid var(--line-soft)}
-.earn-card{background:var(--paper);padding:18px 18px;display:flex;flex-direction:column;gap:8px;min-height:120px}
-.earn-top{display:flex;justify-content:space-between;align-items:baseline}
-.earn-ticker{font-family:'IBM Plex Mono',monospace;font-weight:500;color:var(--gold);font-size:14px;letter-spacing:0.06em}
-.earn-badge{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;padding:3px 8px;border-radius:2px}
-.badge-bmo{background:var(--teal);color:var(--ink)}
-.badge-amc{background:var(--amber);color:var(--ink)}
-.badge-unconf{background:var(--red);color:var(--ink);margin-left:6px}
-.earn-name{font-family:'Fraunces',serif;font-size:16px;color:var(--text-1);font-weight:400;font-variation-settings:'opsz' 144,'SOFT' 30}
-.earn-meta{display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--text-3);letter-spacing:0.08em;text-transform:uppercase;margin-top:auto;padding-top:6px;border-top:1px solid var(--line-soft)}
+  /* EARNINGS */
+  .earnings{margin-top:48px;padding-top:36px;border-top:1px solid var(--line)}
+  .earnings h2{font-family:"Fraunces";font-style:italic;font-variation-settings:"opsz" 72,"SOFT" 40;font-weight:300;font-size:42px;letter-spacing:-0.01em;margin:0 0 8px;color:var(--text-1)}
+  .earnings .sub{font-family:"IBM Plex Mono";font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--text-2);margin-bottom:22px}
+  .week{margin-bottom:30px}
+  .week-h{font-family:"IBM Plex Mono";font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line-soft)}
+  .ern-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}
+  .ern{background:var(--paper);border:1px solid var(--line);padding:14px;border-radius:3px}
+  .ern .tick{font-family:"IBM Plex Mono";font-size:18px;color:var(--gold);font-weight:500;letter-spacing:.05em}
+  .ern .co{font-family:"Fraunces";font-variation-settings:"opsz" 20,"SOFT" 30;font-size:14px;color:var(--text-1);margin:2px 0 8px}
+  .ern .meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .ern .dt{font-family:"IBM Plex Mono";font-size:11px;color:var(--text-2)}
+  .badge{font-family:"IBM Plex Mono";font-size:9px;letter-spacing:.15em;padding:2px 6px;border-radius:2px;font-weight:500}
+  .badge.bmo{background:rgba(109,184,168,.18);color:var(--teal)}
+  .badge.amc{background:rgba(212,165,116,.18);color:var(--amber)}
+  .badge.cat{background:transparent;border:1px solid var(--line);color:var(--text-2);text-transform:uppercase}
+  .badge.unconf{background:rgba(232,98,76,.18);color:var(--red);text-transform:uppercase}
 
-.footer{margin-top:72px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;font-size:12px;gap:24px}
-.footer-left{font-family:'Fraunces',serif;font-style:italic;color:var(--text-3);max-width:680px;font-size:12.5px;line-height:1.5}
-.footer-right{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-3);white-space:nowrap}
+  /* FOOTER */
+  footer{margin-top:48px;padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap}
+  footer .src{font-family:"Fraunces";font-style:italic;font-variation-settings:"opsz" 14,"SOFT" 40;color:var(--text-3);font-size:13px;max-width:780px;line-height:1.5}
+  footer .ts{font-family:"IBM Plex Mono";font-size:11px;letter-spacing:.15em;color:var(--text-3)}
 
-@media (max-width:900px){
-  body{padding:32px 24px}
-  .masthead h1{font-size:56px}
-  .ticker-grid{grid-template-columns:repeat(3,1fr)}
-  .earnings-grid{grid-template-columns:1fr}
-  .story{grid-template-columns:60px 1fr;gap:18px}
-  .story-rank{font-size:44px}
-  .footer{flex-direction:column;gap:14px}
-}
+  .hidden{display:none !important}
+  @media (max-width:720px){
+    .story{grid-template-columns:54px 1fr;gap:18px}
+    .rank{font-size:46px}
+    .headline{font-size:21px}
+    h1.title{font-size:54px}
+  }
 </style>
 </head>
 <body>
+<div class="wrap">
 
-<header class="masthead">
   <div class="masthead-top">
-    <span class="brand">The Morning Tape · Daily</span>
-    <span class="date">Thursday, June 4, 2026</span>
+    <div class="brand"><b>The Morning Tape</b> &middot; Daily</div>
+    <div class="date">Friday &middot; 05 June 2026</div>
   </div>
-  <h1><em>Market Briefing</em></h1>
-  <p class="subtitle">Tape opens defensive after Iran-Kuwait strikes shake a record-high S&amp;P; oil bid, software gets gutted on beats, and Hormuz remains shut as Bitcoin slips below $67k.</p>
+  <h1 class="title">Market Briefing</h1>
+  <p class="subtitle">Tape opens defensive after Broadcom's AI guide-hold knocks chips, a record-close Dow rotates into healthcare and banks, oil drifts as Hormuz brinkmanship grinds on, and traders queue for May payrolls &mdash; the print that decides whether the June FOMC can keep the cut option alive.</p>
 
-  <div class="gauge-wrap">
+  <div class="gauge">
     <div class="gauge-head">
-      <span class="gauge-anchor-left">◀ Recession Risk</span>
-      <span>Cross-Asset Sentiment</span>
-      <span class="gauge-anchor-right">Bull Market ▶</span>
-    </div>
-    <div class="gauge-row">
-      <div class="gauge-bar-wrap">
-        <div class="gauge-bar">
-          <div class="gauge-needle" style="left:58%"></div>
-        </div>
-      </div>
+      <div class="gauge-label">Cross-Asset Sentiment &middot; Holistic Score</div>
       <div class="gauge-score">58</div>
     </div>
-    <p class="gauge-driver">Constructive credit (HY OAS ~272bps) and a docile VIX at 15.77 hold the floor; geopolitical premium in oil, AI-software de-rating, and crypto outflows ($4.2B/3w) cap the ceiling.</p>
+    <div class="gauge-bar">
+      <div class="gauge-needle" style="left:calc(58% - 1.5px)"></div>
+    </div>
+    <div class="gauge-anchors"><span>Recession Risk</span><span>Bull Market</span></div>
+    <div class="gauge-note">Constructive but capped &mdash; VIX 16 and tight HY OAS (~285bp) say risk is calm, yet Hormuz, a 13-day spot BTC outflow streak, and a 4.46% 10Y keep the gauge from running away. The Dow's record close masks under-the-surface tech rotation.</div>
   </div>
-</header>
 
-<section class="ticker-section">
-  <div class="section-label"><span>§ 01 · Tape</span><span class="right">Last Close · Jun 3, 2026 / Pre-Mkt · Jun 4</span></div>
-  <div class="ticker-grid">
-    <div class="ticker-card">
-      <div class="ticker-name"><span>S&amp;P 500</span><span class="tag">SPOT</span></div>
-      <div class="ticker-value">7,548.61</div>
-      <div class="ticker-chg chg-dn">−0.74%</div>
-      <div class="ticker-note">Off Tuesday's record above 7,600.</div>
-    </div>
-    <div class="ticker-card">
-      <div class="ticker-name"><span>Nasdaq Comp</span><span class="tag">SPOT</span></div>
-      <div class="ticker-value">24,872</div>
-      <div class="ticker-chg chg-dn">−0.89%</div>
-      <div class="ticker-note">Software softens before AVGO/CRWD.</div>
-    </div>
-    <div class="ticker-card">
-      <div class="ticker-name"><span>Dow Jones</span><span class="tag">SPOT</span></div>
-      <div class="ticker-value">44,917</div>
-      <div class="ticker-chg chg-dn">−1.21%</div>
-      <div class="ticker-note">Heaviest drag of the majors.</div>
-    </div>
-    <div class="ticker-card">
-      <div class="ticker-name"><span>US 10Y</span><span class="tag">SPOT</span></div>
-      <div class="ticker-value">4.48%</div>
-      <div class="ticker-chg chg-up">+4 bps</div>
-      <div class="ticker-note">Oil-led inflation re-pricing.</div>
-    </div>
-    <div class="ticker-card">
-      <div class="ticker-name"><span>US 30Y</span><span class="tag">SPOT</span></div>
-      <div class="ticker-value">4.92%</div>
-      <div class="ticker-chg chg-up">+3 bps</div>
-      <div class="ticker-note">Long end leads steepening.</div>
-    </div>
-    <div class="ticker-card">
-      <div class="ticker-name"><span>Brent</span><span class="tag">SPOT</span></div>
-      <div class="ticker-value">$97.98</div>
-      <div class="ticker-chg chg-up">+1.84%</div>
-      <div class="ticker-note">Third straight session higher.</div>
-    </div>
-    <div class="ticker-card">
-      <div class="ticker-name"><span>Bitcoin</span><span class="tag">SPOT</span></div>
-      <div class="ticker-value">$67,250</div>
-      <div class="ticker-chg chg-dn">−6.5%</div>
-      <div class="ticker-note">Lowest open since late March.</div>
-    </div>
-    <div class="ticker-card">
-      <div class="ticker-name"><span>VIX</span><span class="tag">SPOT</span></div>
-      <div class="ticker-value">15.77</div>
-      <div class="ticker-chg chg-up">+0.4</div>
-      <div class="ticker-note">Still well below long-run mean.</div>
-    </div>
-    <div class="ticker-card">
-      <div class="ticker-name"><span>Gold</span><span class="tag">SPOT</span></div>
-      <div class="ticker-value">$4,440</div>
-      <div class="ticker-chg chg-dn">−1.11%</div>
-      <div class="ticker-note">Profit-taking on stronger DXY.</div>
-    </div>
-    <div class="ticker-card">
-      <div class="ticker-name"><span>ES (S&amp;P)</span><span class="tag">FUT · PRE-MKT</span></div>
-      <div class="ticker-value">7,521.75</div>
-      <div class="ticker-chg chg-dn">−0.43%</div>
-      <div class="ticker-note">Oil + AI de-rating weigh.</div>
-    </div>
-    <div class="ticker-card">
-      <div class="ticker-name"><span>NQ (Nasdaq)</span><span class="tag">FUT · PRE-MKT</span></div>
-      <div class="ticker-value">22,184</div>
-      <div class="ticker-chg chg-dn">−0.71%</div>
-      <div class="ticker-note">AVGO −13% AH drags megacap.</div>
-    </div>
-    <div class="ticker-card">
-      <div class="ticker-name"><span>YM (Dow)</span><span class="tag">FUT · PRE-MKT</span></div>
-      <div class="ticker-value">44,710</div>
-      <div class="ticker-chg chg-dn">−0.36%</div>
-      <div class="ticker-note">Defensive bid limits damage.</div>
+  <div class="ticker-section">
+    <div class="section-bar"><span class="sym">&sect; 01a</span><span class="title-s">Tape &mdash; Spot</span><span class="rule"></span></div>
+    <div class="ticker-grid">
+      <div class="tk"><div class="name">S&amp;P 500</div><div class="val">7,584.31</div><div class="chg up">+31.10 &middot; +0.41%</div><div class="note">Record close; breadth carried by health, banks.</div></div>
+      <div class="tk"><div class="name">Nasdaq Comp</div><div class="val">26,830.96</div><div class="chg dn">&minus;24.15 &middot; &minus;0.09%</div><div class="note">Chips drag after AVGO guide; AI premium tested.</div></div>
+      <div class="tk"><div class="name">Dow Jones</div><div class="val">51,561.93</div><div class="chg up">+874.86 &middot; +1.73%</div><div class="note">Record print; UNH, GS, MRK lead rotation.</div></div>
+      <div class="tk"><div class="name">US 10Y</div><div class="val">4.46%</div><div class="chg dn">&minus;4 bp</div><div class="note">Bid into NFP; curve 2s10s +41bp, dis-inverted.</div></div>
+      <div class="tk"><div class="name">US 30Y</div><div class="val">4.99%</div><div class="chg dn">&minus;3 bp</div><div class="note">Long end firm; 5% remains the magnet.</div></div>
+      <div class="tk"><div class="name">Brent</div><div class="val">$94.71</div><div class="chg dn">&minus;0.34%</div><div class="note">Hormuz premium intact but easing on talks.</div></div>
+      <div class="tk"><div class="name">Bitcoin</div><div class="val">$61,628</div><div class="chg dn">&minus;2.7% MTD</div><div class="note">Spot ETF outflows 13 sessions, &minus;$4.4bn.</div></div>
+      <div class="tk"><div class="name">VIX</div><div class="val">16.05</div><div class="chg dn">&minus;0.4 vol</div><div class="note">Front vol asleep; tail risk priced in skew.</div></div>
+      <div class="tk"><div class="name">Gold</div><div class="val">$4,466</div><div class="chg dn">&minus;0.20%</div><div class="note">Off highs but a defensive bid lingers.</div></div>
     </div>
   </div>
-</section>
 
-<section class="stories-section">
-  <h2 class="section-title"><em>Top 10 Stories</em></h2>
-  <p class="section-sub">Ranked by cross-asset breadth · Jun 4, 2026</p>
+  <div class="ticker-section">
+    <div class="section-bar"><span class="sym">&sect; 01b</span><span class="title-s">Pre-Market Futures</span><span class="rule"></span></div>
+    <div class="ticker-grid">
+      <div class="tk futures"><div class="name">S&amp;P 500 Futures <span class="ftag">PRE-MKT</span></div><div class="val">7,571</div><div class="chg dn">&minus;13 &middot; &minus;0.17%</div><div class="note">Mild de-risk into payrolls.</div></div>
+      <div class="tk futures"><div class="name">Nasdaq Futures <span class="ftag">PRE-MKT</span></div><div class="val">26,712</div><div class="chg dn">&minus;119 &middot; &minus;0.44%</div><div class="note">Chips lead the give-back.</div></div>
+      <div class="tk futures"><div class="name">Dow Futures <span class="ftag">PRE-MKT</span></div><div class="val">51,495</div><div class="chg dn">&minus;67 &middot; &minus;0.13%</div><div class="note">Holding the bulk of Thursday's surge.</div></div>
+    </div>
+  </div>
 
-  <div class="filter-bar">
+  <div class="filter-bar" id="filterBar">
     <button class="chip active" data-filter="all">All</button>
     <button class="chip" data-filter="equity">Equity</button>
-    <button class="chip" data-filter="credit">Credit · Rates</button>
+    <button class="chip" data-filter="credit">Credit &middot; Rates</button>
     <button class="chip" data-filter="commod">Commodities</button>
     <button class="chip" data-filter="crypto">Crypto</button>
-    <button class="chip" data-filter="macro">Macro · Policy</button>
+    <button class="chip" data-filter="macro">Macro &middot; Policy</button>
     <button class="chip" data-filter="fx">FX</button>
   </div>
 
-  <article class="story" data-areas="commod macro equity">
-    <div class="story-rank top">01</div>
-    <div class="story-body">
-      <div class="story-tags">
-        <span class="tag tag-critical">CRITICAL</span>
-        <span class="tag tag-area commod">COMMOD</span>
-        <span class="tag tag-area macro">MACRO</span>
-        <span class="tag tag-area equity">EQUITY</span>
-      </div>
-      <h3 class="story-headline">Iran strikes Kuwait airport, US hits targets near Hormuz as ceasefire frays</h3>
-      <p class="story-summary">Iranian missiles damaged <b>Kuwait's main airport and wounded dozens</b> as the US military launched fresh strikes near the Strait of Hormuz, shattering optimism around the April ceasefire. <b>Brent +1.84% to $97.98</b>, WTI +2% to $95.91, a 1.5-week high. Tasnim says message-channel exchanges with Washington are suspended pending Iran's Lebanon conditions.</p>
-      <div class="impact">
-        <div class="impact-label">Market Impact</div>
-        <div class="impact-text">Oil-led inflation re-pricing pushed US 10Y up 4bps to 4.48% and lifted long-end yields; DXY caught a safety bid (+0.33% to 99.55). Risk assets unwound Tuesday's record highs. Cross-asset hedges (gold, vol) ironically <b>underperformed</b> as dollar strength dominated.
-          <span class="impact-watch"><em>Watch:</em> <code>CL1!  BZ=F  XLE  USO  DXY  TLT  GLD</code></span>
-        </div>
-      </div>
-      <p class="story-source">Source · <a href="https://english.alarabiya.net/amp/News/middle-east/2026/06/03/iran-attacks-kuwait-us-strikes-near-hormuz-as-diplomacy-stalls" target="_blank" rel="noopener">Al Arabiya — Iran attacks Kuwait, US strikes near Hormuz</a></p>
-    </div>
-  </article>
+  <div class="section-bar"><span class="sym">&sect; 01</span><span class="title-s">Top Ten &middot; Ranked by Cross-Asset Breadth</span><span class="rule"></span></div>
+  <div class="stories">
 
-  <article class="story" data-areas="equity">
-    <div class="story-rank top">02</div>
-    <div class="story-body">
-      <div class="story-tags">
-        <span class="tag tag-critical">CRITICAL</span>
-        <span class="tag tag-area equity">EQUITY</span>
+    <article class="story top" data-areas="macro equity credit">
+      <div class="rank">01</div>
+      <div class="body">
+        <div class="tags"><span class="tag crit">Critical</span><span class="tag area macro">Macro</span><span class="tag area equity">Equity</span><span class="tag area credit">Credit &middot; Rates</span></div>
+        <h3 class="headline">May payrolls land at 8:30 ET with consensus 80K&ndash;105K &mdash; the print that resets the Fed-cut clock</h3>
+        <p class="summary">Economists look for a sharp deceleration from April, with the range running <b>80K to 105K</b>. ADP already showed only <b>122K</b> private hires in May. A weak headline reopens the September cut debate; a hot one cements the FOMC's <b>3.50&ndash;3.75%</b> hold on <b>June 17</b>.</p>
+        <div class="impact"><div class="ttl">Market Impact</div><div class="txt">Sub-80K print: front-end rallies 8&ndash;12bp, USD softer, gold bid, small caps lead reversal. 150K+ surprise: 10Y back through 4.55%, dollar grinds higher, chips and homebuilders the gives.</div><div class="watch-line"><b>Watch:</b> <i>IWM, XHB, TLT, DXY, EURUSD, SOFR Sep26 futures.</i></div></div>
+        <div class="source">Source: <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-05-2026" target="_blank" rel="noopener">TheStreet</a></div>
       </div>
-      <h3 class="story-headline">Broadcom, CrowdStrike sell off on earnings beats as AI premium gets tested</h3>
-      <p class="story-summary">Broadcom posted <b>revenue $22.19B (+48% YoY)</b> and adjusted EPS of $2.44, both ahead of consensus, with Q3 guide of <b>$29.4B vs. $28.3B</b> expected. Stock fell <b>−13% after-hours</b>. CrowdStrike beat on EPS ($1.10) and revenue ($1.39B), announced a <b>4-for-1 split</b>, and lifted FY guide — shares −10% AH. The pattern echoes Palo Alto and Credo: beats are no longer enough.</p>
-      <div class="impact">
-        <div class="impact-label">Market Impact</div>
-        <div class="impact-text">Software RSI was already stretched after a 40% rally from April lows. The reaction suggests <b>positioning, not fundamentals</b>, is the binding constraint. Watch the SOX and IGV for follow-through; momentum unwind risk is rising into mid-year rebalances.
-          <span class="impact-watch"><em>Watch:</em> <code>AVGO  CRWD  IGV  SMH  SOXX  PANW  CRDO</code></span>
-        </div>
-      </div>
-      <p class="story-source">Source · <a href="https://www.cnbc.com/2026/06/03/stock-market-today-live-updates.html" target="_blank" rel="noopener">CNBC — S&amp;P 500 futures fall as Broadcom leads tech lower</a></p>
-    </div>
-  </article>
+    </article>
 
-  <article class="story" data-areas="commod macro">
-    <div class="story-rank top">03</div>
-    <div class="story-body">
-      <div class="story-tags">
-        <span class="tag tag-critical">CRITICAL</span>
-        <span class="tag tag-area commod">COMMOD</span>
-        <span class="tag tag-area macro">MACRO</span>
+    <article class="story top" data-areas="equity">
+      <div class="rank">02</div>
+      <div class="body">
+        <div class="tags"><span class="tag crit">Critical</span><span class="tag area equity">Equity</span></div>
+        <h3 class="headline">Broadcom holds AI chip target steady &mdash; the line that triggered the rotation out of mega-cap tech</h3>
+        <p class="summary">AVGO reported a record Q2 with operating margins of <b>~67%</b> and an EBITDA guide of <b>~68%</b>, but management <b>did not raise</b> its FY26 AI-chip target. The market took the no-raise as a ceiling, sending semis lower and the Nasdaq <b>&minus;0.09%</b> against a <b>+1.73%</b> Dow.</p>
+        <div class="impact"><div class="ttl">Market Impact</div><div class="txt">A multi-day tape-test for the AI capex narrative. Watch the SOX/SPX ratio, hyperscaler capex commentary, and the price action in NVDA and AVGO as the marginal bid for AI exposure.</div><div class="watch-line"><b>Watch:</b> <i>SOXX, AVGO, NVDA, MSFT, META, hyperscaler capex notes.</i></div></div>
+        <div class="source">Source: <a href="https://www.cnbc.com/2026/06/03/stock-market-today-live-updates.html" target="_blank" rel="noopener">CNBC</a></div>
       </div>
-      <h3 class="story-headline">Strait of Hormuz remains largely closed three months after Israel-US strikes on Iran</h3>
-      <p class="story-summary">More than three months on from the February 28 strikes, <b>~25% of global seaborne oil</b> and <b>~20% of LNG</b> that previously transited Hormuz remain disrupted. Tanker re-routings via the Red Sea continue. EIA still pencils Brent at ~$106/b for May–June; physical premiums tell a similar story.</p>
-      <div class="impact">
-        <div class="impact-label">Market Impact</div>
-        <div class="impact-text">Persistent supply-chain bottleneck supports a <b>structural oil floor</b> and keeps freight rates elevated. Energy names retain a relative-value bid; airlines and chemicals face margin pressure into Q2 prints.
-          <span class="impact-watch"><em>Watch:</em> <code>XLE  OIH  XOP  XAL  XLB  ASC  TNK</code></span>
-        </div>
-      </div>
-      <p class="story-source">Source · <a href="https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis" target="_blank" rel="noopener">Wikipedia — 2026 Strait of Hormuz crisis</a></p>
-    </div>
-  </article>
+    </article>
 
-  <article class="story" data-areas="macro equity fx">
-    <div class="story-rank">04</div>
-    <div class="story-body">
-      <div class="story-tags">
-        <span class="tag tag-critical">CRITICAL</span>
-        <span class="tag tag-area macro">MACRO</span>
-        <span class="tag tag-area equity">EQUITY</span>
-        <span class="tag tag-area fx">FX</span>
+    <article class="story top" data-areas="commod macro">
+      <div class="rank">03</div>
+      <div class="body">
+        <div class="tags"><span class="tag watch">Watch</span><span class="tag area commod">Commodities</span><span class="tag area macro">Macro</span></div>
+        <h3 class="headline">Hormuz stalemate keeps oil above $90 &mdash; Brent off 10% from May highs as ceasefire grinds</h3>
+        <p class="summary">Iran has selectively let some tankers transit since the April truce, but commercial traffic remains far below pre-conflict levels &mdash; roughly <b>25% of seaborne oil</b> and <b>20% of global LNG</b> route through the strait. Brent at <b>$94.71</b>, WTI at <b>$92.63</b>; EIA shows US crude stocks down six straight weeks.</p>
+        <div class="impact"><div class="ttl">Market Impact</div><div class="txt">Crude is the swing variable for the Fed's inflation read. A clean diplomatic re-open could cut $8&ndash;12 off Brent and 30&ndash;40bp off breakevens; any tanker incident takes Brent back through $100.</div><div class="watch-line"><b>Watch:</b> <i>BZ=F, CL=F, XLE, USO, breakevens, 5y5y inflation swap.</i></div></div>
+        <div class="source">Source: <a href="https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis" target="_blank" rel="noopener">Reuters / Strait of Hormuz crisis chronology</a></div>
       </div>
-      <h3 class="story-headline">USTR floats 12.5% tariffs on 60 trading partners; Beijing vows retaliation</h3>
-      <p class="story-summary">The US Trade Representative announced plans for <b>additional tariffs of up to 12.5%</b> across 60 partners including China, while the EU's new Industrial Accelerator and Cybersecurity Acts threaten to lock Chinese firms out of slices of the European market. Shanghai Composite <b>−0.7% to 4,055</b>; Shenzhen −0.4%.</p>
-      <div class="impact">
-        <div class="impact-label">Market Impact</div>
-        <div class="impact-text">Trade-war re-escalation lifts inflation tails and pressures multinationals with China exposure. DXY +0.33% reflects the safety bid; CNH crosses widening. Watch for guidance haircuts in autos, semis, capital goods.
-          <span class="impact-watch"><em>Watch:</em> <code>FXI  KWEB  EWZ  EEM  CAT  DE  DXY  USDCNH</code></span>
-        </div>
-      </div>
-      <p class="story-source">Source · <a href="https://tradingeconomics.com/china/stock-market" target="_blank" rel="noopener">Trading Economics — Shanghai trade tensions</a></p>
-    </div>
-  </article>
+    </article>
 
-  <article class="story" data-areas="macro commod">
-    <div class="story-rank">05</div>
-    <div class="story-body">
-      <div class="story-tags">
-        <span class="tag tag-watch">WATCH</span>
-        <span class="tag tag-area macro">MACRO</span>
-        <span class="tag tag-area commod">COMMOD</span>
+    <article class="story" data-areas="crypto equity">
+      <div class="rank">04</div>
+      <div class="body">
+        <div class="tags"><span class="tag crit">Critical</span><span class="tag area crypto">Crypto</span><span class="tag area equity">Equity</span></div>
+        <h3 class="headline">Spot bitcoin ETFs hit 13-day outflow streak &mdash; $4.4bn out, BTC down 21% from May high</h3>
+        <p class="summary">From <b>May 15 to June 3</b>, the spot complex shed <b>$4.33bn</b> across <b>59,351 BTC</b>; June 3 alone saw <b>&minus;$397M</b>. ETH ETFs are worse, with a record <b>17-day</b> outflow streak. Bitcoin trades near <b>$61,600</b>, ether <b>$1,910</b>.</p>
+        <div class="impact"><div class="ttl">Market Impact</div><div class="txt">Crypto is acting like a high-beta read on liquidity. A soft NFP could end the outflow streak; another hot inflation print drags coins back toward the cycle 200dma. Cross-watch with HY OAS and the QQQ/IWM ratio.</div><div class="watch-line"><b>Watch:</b> <i>IBIT, FBTC, ETHA, COIN, MSTR, MARA.</i></div></div>
+        <div class="source">Source: <a href="https://www.coinglass.com/etf/bitcoin" target="_blank" rel="noopener">CoinGlass</a></div>
       </div>
-      <h3 class="story-headline">Ukraine drones strike St. Petersburg hours before Putin's economic forum opens</h3>
-      <p class="story-summary">Kyiv launched a major long-range assault on St. Petersburg, claiming hits on a naval warship and the <b>St. Petersburg oil terminal</b>, one of Russia's largest transshipment complexes. Russia intercepted <b>350+ drones</b>. Tuesday's Russian barrage on Kyiv killed at least 23. Rutte met Zelenskyy in Kyiv on Wednesday.</p>
-      <div class="impact">
-        <div class="impact-label">Market Impact</div>
-        <div class="impact-text">Energy-infrastructure strike risk in the Baltic supports diesel cracks and northern European gas. EUR/USD digesting safe-haven dollar bid; defense names continue their multi-year re-rating.
-          <span class="impact-watch"><em>Watch:</em> <code>TTF  RBOB  GD  LMT  RTX  HO=F  EURUSD</code></span>
-        </div>
-      </div>
-      <p class="story-source">Source · <a href="https://www.cnn.com/2026/06/03/europe/ukraine-drone-attack-russia-st-petersburg-intl-hnk" target="_blank" rel="noopener">CNN — Ukrainian drones strike St. Petersburg</a></p>
-    </div>
-  </article>
+    </article>
 
-  <article class="story" data-areas="crypto">
-    <div class="story-rank">06</div>
-    <div class="story-body">
-      <div class="story-tags">
-        <span class="tag tag-watch">WATCH</span>
-        <span class="tag tag-area crypto">CRYPTO</span>
+    <article class="story" data-areas="equity macro">
+      <div class="rank">05</div>
+      <div class="body">
+        <div class="tags"><span class="tag watch">Watch</span><span class="tag area equity">Equity</span><span class="tag area macro">Macro</span></div>
+        <h3 class="headline">Dow's 874-point record close masks a textbook defensive rotation &mdash; health, banks, staples lead</h3>
+        <p class="summary">UnitedHealth <b>+5.36%</b>, Goldman <b>+4.98%</b>, Merck <b>+4.86%</b>, with JPM <b>+3%</b> and WMT <b>+1%</b> adding heft. The breadth divergence &mdash; Dow up <b>1.73%</b> with Nasdaq red &mdash; is classic late-cycle rotation, not a broad risk-on print.</p>
+        <div class="impact"><div class="ttl">Market Impact</div><div class="txt">Equal-weight has outperformed cap-weighted on the week. If the rotation extends, expect RSP &gt; SPY and value &gt; growth factor; watch financials' response to a flatter curve if 2s rally on a weak payrolls print.</div><div class="watch-line"><b>Watch:</b> <i>RSP/SPY, IVE/IVW, XLF, XLV, XLP, UNH.</i></div></div>
+        <div class="source">Source: <a href="https://www.cnbc.com/2026/06/03/stock-market-today-live-updates.html" target="_blank" rel="noopener">CNBC Markets</a></div>
       </div>
-      <h3 class="story-headline">Bitcoin slips below $67k; spot ETFs see $4.2B withdrawn over three weeks</h3>
-      <p class="story-summary">BTC opened at <b>$66,667 (−6.5%)</b>, its lowest since March 30. ETH opened at <b>$1,857 (−7.3%)</b>, lowest since late February. Bitcoin spot ETFs have bled <b>$1.67B this week alone, $4.21B over three weeks</b>; Ethereum ETFs have shed $712M over the same span.</p>
-      <div class="impact">
-        <div class="impact-label">Market Impact</div>
-        <div class="impact-text">Persistent ETF outflows mark the cleanest unwind signal since the Q1 spot-ETF launch wave. Levered miners and treasury-stack names (MSTR, CLSK) catching the worst of the de-rating; watch the $63k support shelf.
-          <span class="impact-watch"><em>Watch:</em> <code>BTC  ETH  IBIT  FBTC  MSTR  COIN  CLSK</code></span>
-        </div>
-      </div>
-      <p class="story-source">Source · <a href="https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-june-3-2026-btc-opens-below-67000-eth-opens-below-2000-114333961.html" target="_blank" rel="noopener">Yahoo Finance — BTC opens below $67k; ETH below $2k</a></p>
-    </div>
-  </article>
+    </article>
 
-  <article class="story" data-areas="equity">
-    <div class="story-rank">07</div>
-    <div class="story-body">
-      <div class="story-tags">
-        <span class="tag tag-watch">WATCH</span>
-        <span class="tag tag-area equity">EQUITY</span>
+    <article class="story" data-areas="macro credit">
+      <div class="rank">06</div>
+      <div class="body">
+        <div class="tags"><span class="tag watch">Watch</span><span class="tag area macro">Macro</span><span class="tag area credit">Credit &middot; Rates</span></div>
+        <h3 class="headline">FOMC June 16&ndash;17 priced for a hold &mdash; but March SEP lifted core PCE to 2.7% for 2026</h3>
+        <p class="summary">CME-implied odds keep the funds rate at <b>3.50&ndash;3.75%</b>, with the last cut in late 2025. Persistent energy passthrough into PCE and unemployment near <b>4.4%</b> have kept the Committee patient. The Fed flagged Mideast spillovers as a key source of forecast uncertainty.</p>
+        <div class="impact"><div class="ttl">Market Impact</div><div class="txt">Dot-plot revisions are the tape's main June risk after payrolls. A median that pulls the 2026 cut count to one (or zero) reprices the front end higher and likely sends the dollar through 100.</div><div class="watch-line"><b>Watch:</b> <i>ZQ, SR3, DXY, TLT, EDV, 2Y yields.</i></div></div>
+        <div class="source">Source: <a href="https://www.federalreserve.gov/monetarypolicy/fomcminutes20260429.htm" target="_blank" rel="noopener">Federal Reserve &middot; FOMC Minutes</a></div>
       </div>
-      <h3 class="story-headline">Macy's prints best Q1 in four years, raises full-year outlook</h3>
-      <p class="story-summary">Macy's posted <b>3.0% comp growth</b>, its strongest first quarter in four years. Revenue <b>$4.89B vs. $4.61B</b> expected; adjusted EPS <b>$0.13 vs. $0.02</b> consensus. Bloomingdale's comps up <b>10.2%</b> for the seventh straight quarter of gains. FY guide lifted to <b>$2.00–$2.20</b> adj EPS.</p>
-      <div class="impact">
-        <div class="impact-label">Market Impact</div>
-        <div class="impact-text">Department-store resilience contradicts the soft-consumer narrative and previews a constructive backdrop for LULU tonight and KR/CarMax later this month. Off-price and prestige beauty remain the strong segments.
-          <span class="impact-watch"><em>Watch:</em> <code>M  KSS  JWN  LULU  EL  ULTA  XRT</code></span>
-        </div>
-      </div>
-      <p class="story-source">Source · <a href="https://www.businesswire.com/news/home/20260603976443/en/Macys-Inc.-Reports-Strong-First-Quarter-2026-Results-and-Raises-Full-Year-Outlook" target="_blank" rel="noopener">Business Wire — Macy's Q1 results &amp; raised outlook</a></p>
-    </div>
-  </article>
+    </article>
 
-  <article class="story" data-areas="credit macro">
-    <div class="story-rank">08</div>
-    <div class="story-body">
-      <div class="story-tags">
-        <span class="tag tag-watch">WATCH</span>
-        <span class="tag tag-area credit">CREDIT</span>
-        <span class="tag tag-area macro">MACRO</span>
+    <article class="story" data-areas="credit macro">
+      <div class="rank">07</div>
+      <div class="body">
+        <div class="tags"><span class="tag area credit">Credit &middot; Rates</span><span class="tag area macro">Macro</span></div>
+        <h3 class="headline">Curve fully dis-inverted as 2s10s holds +41bp &mdash; MOVE drops to 73 from 115 peak</h3>
+        <p class="summary">The <b>2Y at 4.08%, 10Y at 4.46%, 30Y at 4.99%</b>, and the bill curve clean at <b>3.72%</b> for 3M. The MOVE Treasury vol index has eased from a March peak of <b>115</b> to <b>73</b> &mdash; the calmest rates tape since the spring shock.</p>
+        <div class="impact"><div class="ttl">Market Impact</div><div class="txt">Cheaper convexity into the dot plot is constructive for duration carry trades and steepener structures. Mortgage REITs and BDCs benefit from lower vol; bank NIMs improve at the margin.</div><div class="watch-line"><b>Watch:</b> <i>MOVE, TLT, ZN, KRE, NLY, AGNC.</i></div></div>
+        <div class="source">Source: <a href="https://fred.stlouisfed.org/series/DGS10" target="_blank" rel="noopener">FRED &middot; 10Y Constant Maturity</a></div>
       </div>
-      <h3 class="story-headline">HY OAS holds near 272bps even as Treasuries reprice on oil-led inflation</h3>
-      <p class="story-summary">ICE BofA US High Yield OAS sits at roughly <b>272bps</b>, well inside the 5-year median and tight to fundamentals. 10Y yield up 4bps to <b>4.48%</b>; 30Y +3bps; curve steepening modestly. EIA Wednesday print: <b>US crude stocks 441.7Mbbl, ~2% below the 5-year average</b>.</p>
-      <div class="impact">
-        <div class="impact-label">Market Impact</div>
-        <div class="impact-text">Credit's refusal to widen in the face of geopolitical and rates shocks is the single most constructive cross-asset signal on the tape. <b>Watch the 285bps level</b>: a break wider would be the first real warning shot.
-          <span class="impact-watch"><em>Watch:</em> <code>HYG  JNK  LQD  TLT  CVOL  T10Y2Y</code></span>
-        </div>
-      </div>
-      <p class="story-source">Source · <a href="https://fred.stlouisfed.org/series/BAMLH0A0HYM2" target="_blank" rel="noopener">FRED — ICE BofA US HY OAS</a></p>
-    </div>
-  </article>
+    </article>
 
-  <article class="story" data-areas="macro fx">
-    <div class="story-rank">09</div>
-    <div class="story-body">
-      <div class="story-tags">
-        <span class="tag tag-watch">WATCH</span>
-        <span class="tag tag-area macro">MACRO</span>
-        <span class="tag tag-area fx">FX</span>
+    <article class="story" data-areas="credit">
+      <div class="rank">08</div>
+      <div class="body">
+        <div class="tags"><span class="tag area credit">Credit &middot; Rates</span></div>
+        <h3 class="headline">HY OAS at 272&ndash;285bp &mdash; credit refuses to validate equity's late-day wobble</h3>
+        <p class="summary">ICE BofA US High Yield Index OAS printed <b>2.72%</b> in May and remains near cycle tights into June. Investment-grade corporates run roughly <b>80bp</b>. Credit is the cleanest single risk-on signal still flashing green.</p>
+        <div class="impact"><div class="ttl">Market Impact</div><div class="txt">Until HY OAS pushes through ~330bp, equity drawdowns are buyable on the textbook setup. A 50bp HY widening would be the most reliable signal that the regime has changed.</div><div class="watch-line"><b>Watch:</b> <i>HYG, JNK, LQD, CDX HY, CDX IG.</i></div></div>
+        <div class="source">Source: <a href="https://fred.stlouisfed.org/series/BAMLH0A0HYM2" target="_blank" rel="noopener">FRED &middot; ICE BofA HY OAS</a></div>
       </div>
-      <h3 class="story-headline">G3 ex-US central banks dominate next ten sessions: ECB Jun 11, BoJ Jun 16, BoE Jun 20</h3>
-      <p class="story-summary">After Powell's May 15 handover to <b>Kevin Warsh</b>, the focus shifts to G3 ex-US. ECB pauses are consensus for all of 2026; BoJ is split with several members eyeing near-term hikes despite Middle East risk; BoE priced for one more cut. Fed pricing now leans toward one June cut as the central scenario.</p>
-      <div class="impact">
-        <div class="impact-label">Market Impact</div>
-        <div class="impact-text">Cross-rates likely to be the cleanest expression of policy divergence. JPY catches a bid on any hawkish BoJ surprise; EUR vulnerable if ECB tone shifts dovish on growth softness; gilts re-priced for a more dovish path.
-          <span class="impact-watch"><em>Watch:</em> <code>USDJPY  EURUSD  GBPUSD  DXY  TY  RX1</code></span>
-        </div>
-      </div>
-      <p class="story-source">Source · <a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" target="_blank" rel="noopener">Federal Reserve — FOMC calendar</a></p>
-    </div>
-  </article>
+    </article>
 
-  <article class="story" data-areas="equity">
-    <div class="story-rank">10</div>
-    <div class="story-body">
-      <div class="story-tags">
-        <span class="tag tag-watch">WATCH</span>
-        <span class="tag tag-area equity">EQUITY</span>
+    <article class="story" data-areas="commod fx">
+      <div class="rank">09</div>
+      <div class="body">
+        <div class="tags"><span class="tag area commod">Commodities</span><span class="tag area fx">FX</span></div>
+        <h3 class="headline">Gold consolidates near $4,466 as DXY pins 99.44 &mdash; defensive complex unwinds with patience</h3>
+        <p class="summary">Spot gold off <b>0.20%</b> to <b>$4,466</b>, down from the early-week $4,500 handle. DXY at <b>99.44</b>, just shy of a two-month high after May ADP printed firmer than feared at <b>+122K</b>.</p>
+        <div class="impact"><div class="ttl">Market Impact</div><div class="txt">Gold's resilience above $4,400 with DXY near 100 is the tell that real-money flows still want a tail hedge. EM FX and silver tend to lead the next gold leg; watch the AUD and copper for confirmation.</div><div class="watch-line"><b>Watch:</b> <i>GLD, SLV, GDX, DXY, AUDUSD, HG=F.</i></div></div>
+        <div class="source">Source: <a href="https://fortune.com/article/current-price-of-gold-06-04-2026/" target="_blank" rel="noopener">Fortune</a></div>
       </div>
-      <h3 class="story-headline">Lululemon prints after close tonight; options imply 13.8% move</h3>
-      <p class="story-summary">LULU reports Q1 FY26 today AMC. Consensus revenue <b>$2.40–$2.43B</b> (~2.5% YoY) vs. 7.3% in the year-ago quarter. EPS guide $1.63–$1.68; Street at <b>~$1.67</b>. Options market pricing <b>13.8% implied move</b> — well above the 10.9% 8-quarter average.</p>
-      <div class="impact">
-        <div class="impact-label">Market Impact</div>
-        <div class="impact-text">A clean read on aspirational consumer post-tariff headlines. Beat-and-raise reinforces the Macy's tape; miss validates the "defensive consumer trade is broken" thesis. Knock-on effects for NKE, ONON, DECK, RH.
-          <span class="impact-watch"><em>Watch:</em> <code>LULU  NKE  ONON  DECK  RH  XRT</code></span>
-        </div>
-      </div>
-      <p class="story-source">Source · <a href="https://www.fool.com/investing/2026/06/01/lululemon-athleticas-next-earnings-report-on-june/" target="_blank" rel="noopener">Motley Fool — LULU earnings preview</a></p>
-    </div>
-  </article>
-</section>
+    </article>
 
-<section class="earnings-section">
-  <h2 class="section-title"><em>§ 02 — US Retailer Earnings Calendar</em></h2>
-  <p class="section-sub">Next three weeks · Confirmed US retailers</p>
-
-  <div class="earnings-week">
-    <div class="week-label">Week One <span class="week-range">Jun 4 – Jun 10</span></div>
-    <div class="earnings-grid">
-      <div class="earn-card">
-        <div class="earn-top"><span class="earn-ticker">LULU</span><span class="earn-badge badge-amc">AMC</span></div>
-        <div class="earn-name">Lululemon Athletica</div>
-        <div class="earn-meta"><span>Thu Jun 4</span><span>Athletic Apparel</span></div>
+    <article class="story" data-areas="macro fx">
+      <div class="rank">10</div>
+      <div class="body">
+        <div class="tags"><span class="tag area macro">Macro</span><span class="tag area fx">FX</span></div>
+        <h3 class="headline">ECB on June 11, BoJ on June 17 &mdash; global policy block lines up against US payrolls week</h3>
+        <p class="summary">ECB is expected to hold the deposit rate again, with staff confirming <b>2.6%</b> inflation for 2026 and the medium-term <b>2%</b> path intact. BoJ kept policy at <b>0.75%</b> at its April meeting; some members now flag a hike from the next meeting. BoE follows on <b>June 18</b>.</p>
+        <div class="impact"><div class="ttl">Market Impact</div><div class="txt">A hawkish BoJ surprise into a soft NFP is the highest-octane cross-rate setup of the month. EURUSD compressed; JPY shorts the consensus pain trade. Bunds vs Treasuries spread the rates expression.</div><div class="watch-line"><b>Watch:</b> <i>EURUSD, USDJPY, GBPUSD, Bunds, JGB10Y.</i></div></div>
+        <div class="source">Source: <a href="https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html" target="_blank" rel="noopener">European Central Bank</a></div>
       </div>
-    </div>
+    </article>
+
   </div>
 
-  <div class="earnings-week">
-    <div class="week-label">Week Two <span class="week-range">Jun 11 – Jun 17</span></div>
-    <div class="earnings-grid">
-      <div class="earn-card">
-        <div class="earn-top"><span class="earn-ticker">KMX</span><span class="earn-badge badge-bmo">BMO</span></div>
-        <div class="earn-name">CarMax</div>
-        <div class="earn-meta"><span>Wed Jun 17</span><span>Auto Retail</span></div>
+  <section class="earnings">
+    <div class="section-bar"><span class="sym">&sect; 02</span><span class="title-s">US Retailer Earnings &middot; Next 3 Weeks</span><span class="rule"></span></div>
+    <h2>The Print Calendar</h2>
+    <div class="sub">June 08 &mdash; June 28 &middot; 2026</div>
+
+    <div class="week">
+      <div class="week-h">Week One &middot; June 08 &ndash; June 14</div>
+      <div class="ern-grid">
+        <div class="ern">
+          <div class="tick">CASY</div>
+          <div class="co">Casey's General Stores</div>
+          <div class="meta"><span class="dt">Tue &middot; Jun 09</span><span class="badge amc">AMC</span><span class="badge cat">C-Store &middot; Fuel</span></div>
+        </div>
+        <div class="ern">
+          <div class="tick">SIG</div>
+          <div class="co">Signet Jewelers</div>
+          <div class="meta"><span class="dt">Thu &middot; Jun 11</span><span class="badge bmo">BMO</span><span class="badge cat">Specialty &middot; Jewelry</span><span class="badge unconf">Unconfirmed</span></div>
+        </div>
+        <div class="ern">
+          <div class="tick">FIVE</div>
+          <div class="co">Five Below</div>
+          <div class="meta"><span class="dt">Wed &middot; Jun 10</span><span class="badge amc">AMC</span><span class="badge cat">Discount</span><span class="badge unconf">Unconfirmed</span></div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="earnings-week">
-    <div class="week-label">Week Three <span class="week-range">Jun 18 – Jun 25</span></div>
-    <div class="earnings-grid">
-      <div class="earn-card">
-        <div class="earn-top"><span class="earn-ticker">KR</span><span class="earn-badge badge-bmo">BMO</span></div>
-        <d
+    <div class="week">
+      <div class="week-h">Week Two &middot; June 15 &ndash; June 21</div>
+      <div class="ern-grid">
+        <div class="ern">
+          <div class="tick">KR</div>
+          <div class="co">The Kroger Co.</div>
+          <div class="meta"><span class="dt">Thu &middot; Jun 18</span><span class="badge bmo">BMO</span><span class="badge cat">Grocery</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="week">
+      <div class="week-h">Week Three &middot; June 22 &ndash; June 28</div>
+      <div class="ern-grid">
+        <div class="ern">
+          <div class="tick">DRI</div>
+          <div class="co">Darden Restaurants</div>
+          <div class="meta"><span class="dt">Thu &middot; Jun 25</span><span class="badge bmo">BMO</span><span class="badge cat">Restaurants</span></div>
+        </div>
+        <div class="ern">
+          <div class="tick">BKE</div>
+          <div class="co">The Buckle</div>
+          <div class="meta"><span class="dt">Fri &middot; Jun 26</span><span class="badge bmo">BMO</span><span class="badge cat">Specialty &middot; Apparel</span><span class="badge unconf">Unconfirmed</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="src">Sources: CNBC, The Street, Reuters, Bloomberg, Trading Economics, FRED &middot; St. Louis Fed, Federal Reserve, ECB, EIA, CoinGlass, Fortune, SEC filings. Levels reflect Jun 4 close and Jun 5 pre-market unless otherwise stated; futures move intraday.</div>
+    <div class="ts">Published &middot; 05 Jun 2026 &middot; 07:55 ET</div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var bar = document.getElementById('filterBar');
+  if(!bar) return;
+  bar.addEventListener('click', function(e){
+    var btn = e.target.closest('.chip'); if(!btn) return;
+    var f = btn.getAttribute('data-filter');
+    [].forEach.call(bar.querySelectorAll('.chip'), function(c){ c.classList.toggle('active', c===btn); });
+    var stories = document.querySelectorAll('.story');
+    [].forEach.call(stories, function(s){
+      if(f==='all'){ s.classList.remove('hidden'); return; }
+      var areas = (s.getAttribute('data-areas')||'').split(/\s+/);
+      s.classList.toggle('hidden', areas.indexOf(f)===-1);
+    });
+  });
+})();
+</script>
+</body>
+</html>
+                                                                                                                                                                                                                                                                                                       
